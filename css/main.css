@@ -1,3 +1,14 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+}
+
+
 body {
     max-width: 1024px;
     margin: 0 auto;
@@ -18,7 +29,56 @@ input {
 .grid {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 20px;
+    grid-column-gap: 15px;
     grid-row-gap: 30px;
     padding: 10px;
+}
+
+@media only screen and (max-width : 1024px){
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        grid-row-gap: 30px;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+
+    body{ 
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;
+        grid-row-gap: 30px;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+    body {
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .grid {
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 20px;
+        grid-row-gap: 30px;
+        padding: 10px;
+        justify-content: space-evenly;
+    }
+    body {
+        margin: 0 auto;
+    }
+
+    input {
+        margin-left: 2em;
+    }
+
 }
