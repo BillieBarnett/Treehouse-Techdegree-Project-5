@@ -1,0 +1,24 @@
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+input {
+    margin: 3em 25%;
+    border: 5px;
+    width: 20em;
+    height: 2em;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.2)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    grid-row-gap: 30px;
+    padding: 10px;
+}
